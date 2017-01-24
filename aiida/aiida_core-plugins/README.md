@@ -1,4 +1,4 @@
-# AiiDA (aiida_core) base image
+# AiiDA (aiida_core/ricoh-plugins) base image
 
 This image just installs the ricoh-plugins branch of the aiida_core code (and its dependencies)
 in a `aiida` account, located in `/home/aiida/code/aiida_core`, and

@@ -1,6 +1,8 @@
 FROM phusion/baseimage:0.9.19
 MAINTAINER AiiDA Team <info@aiida.net>
 
+ARG branch=ricoh_plugins
+
 # Set correct environment variables.
 ENV HOME /root
 
@@ -45,10 +47,10 @@ ENV HOME /home/aiida
 RUN mkdir -p $HOME/code/
 WORKDIR /home/aiida/code
 
-## Get the 'develop' branch with git
+## Get the 'ricoh-plugins' branch with git
 RUN git clone https://github.com/DropD/aiida_core.git && \
     cd aiida_core && \
-    git checkout ricoh-plugins && \
+    git checkout $branch && \
     cd ..
 
 ## Alternatively, use wget
